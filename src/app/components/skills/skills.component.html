@@ -1,0 +1,29 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title" appScrollReveal>Technical Arsenal</h2>
+    <div class="skills-grid">
+      <div class="skill-group glass-card" *ngFor="let category of skillCategories; let i = index" appScrollReveal [class]="'delay-' + (i % 3 + 1)">
+        <div class="card-header">
+          <div class="icon-box">
+             <i [class]="category.icon"></i>
+          </div>
+          <div class="header-titles">
+             <h3>{{ category.title }}</h3>
+             <span class="cat-badge" [ngClass]="category.badge.toLowerCase()">{{ category.badge }}</span>
+          </div>
+        </div>
+        <div class="skill-list mt-3">
+          <div class="skill-item" *ngFor="let skill of category.skills">
+            <div class="skill-info">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level-text" [ngClass]="skill.exp.toLowerCase()">{{ skill.exp }}</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" [style.width]="skill.level + '%'" [ngClass]="skill.exp.toLowerCase() + '-bg'"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

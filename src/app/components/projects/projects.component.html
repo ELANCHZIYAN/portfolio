@@ -1,0 +1,44 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title" appScrollReveal>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card glass-card reveal" *ngFor="let project of projects; let i = index" appScrollReveal
+        [class]="'delay-' + (i % 3 + 1)">
+        <div class="project-content">
+          <div class="project-header">
+            <div class="icon-header">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="links-header">
+              <a [href]="project.codeLink" target="_blank" class="icon-link" aria-label="Github Link"
+                title="Source Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a [href]="project.liveLink" target="_blank" class="icon-link" aria-label="External Link"
+                title="Live Preview">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <span class="category-badge">{{ project.category }}</span>
+            <h3>{{ project.title }}</h3>
+            <span class="role">{{ project.role }}</span>
+            <p>{{ project.description }}</p>
+          </div>
+
+          <div class="project-footer">
+            <ul class="tech-list">
+              <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+            </ul>
+            <!-- <div class="project-actions mt-4">
+              <a [href]="project.liveLink" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View Project</a>
+              <a [href]="project.codeLink" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Code</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

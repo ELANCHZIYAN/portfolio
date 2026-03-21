@@ -1,0 +1,110 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.skill-group {
+  padding: 2.5rem 2rem;
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  
+  .icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    
+    i {
+      font-size: 1.5rem;
+      color: var(--accent-purple);
+    }
+  }
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  
+  h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  .cat-badge {
+    align-self: flex-start;
+    font-size: 0.70rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+  &:last-child { margin-bottom: 0; }
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  
+  .skill-name {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .skill-level-text {
+    font-size: 0.8rem;
+    font-family: monospace;
+    font-weight: 600;
+  }
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  width: 0; 
+  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.skill-group:hover .progress-bar-fill {
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* Badge and Status Colors */
+.expert { color: var(--accent-cyan); background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); }
+.advanced, .proficient { color: var(--accent-purple); background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); }
+.intermediate { color: #f59e0b; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); }
+.growing, .learning { color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); }
+
+/* Progress Bar Colors */
+.expert-bg { background: linear-gradient(90deg, #0284c7, var(--accent-cyan)); }
+.advanced-bg, .proficient-bg { background: linear-gradient(90deg, #6d28d9, var(--accent-purple)); }
+.intermediate-bg { background: linear-gradient(90deg, #d97706, #f59e0b); }
+.learning-bg { background: linear-gradient(90deg, #047857, #10b981); }

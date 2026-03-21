@@ -1,0 +1,30 @@
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  
+  a {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--accent-primary);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: monospace;
+}

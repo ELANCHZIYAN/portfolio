@@ -1,0 +1,19 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="#home">EK.</a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about" [class.active]="activeSection === 'about'">About</a></li>
+        <li><a href="#skills" [class.active]="activeSection === 'skills'">Skills</a></li>
+        <li><a href="#experience" [class.active]="activeSection === 'experience'">Experience</a></li>
+        <li><a href="#projects" [class.active]="activeSection === 'projects'">Projects</a></li>
+        <li><a href="#contact" [class.active]="activeSection === 'contact'">Contact</a></li>
+      </ul>
+      <a href="/assets/Elanchziyan.K%20Angular%20Developer%20(1).pdf" target="_blank" class="btn btn-outline resume-btn">
+        <i class="fa-solid fa-download"></i> Resume
+      </a>
+    </nav>
+  </div>
+</header>

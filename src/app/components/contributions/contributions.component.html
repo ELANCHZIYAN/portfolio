@@ -1,0 +1,16 @@
+<section id="contributions" class="contributions">
+  <div class="container">
+    <h2 class="section-title" appScrollReveal>Key Contributions</h2>
+    <div class="contributions-grid">
+      <div class="contrib-card glass-card reveal" *ngFor="let item of contributions; let i = index" appScrollReveal [class]="'delay-' + (i % 3 + 1)">
+        <div class="contrib-icon">
+          <i [class]="item.icon"></i>
+        </div>
+        <div class="contrib-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
